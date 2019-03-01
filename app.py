@@ -11,11 +11,18 @@ cache = StrictRedisCluster(startup_nodes=startup_nodes, decode_responses=True)
 def get_hit_count():
     return cache.incr('hits')
 
+def get_hit_count2():
+    return cache.incr('test')
+
+def get_hit_count3():
+    return cache.incr('blab')
 
 @app.route('/')
 def hit():
     count = get_hit_count()
-    return 'I have been hit %i times since deployment.\n' % int(count)
+    #s = "This is an {example} with {vars}".format(vars="variables", example="example")
+    page = "hits: {hits}\ntest: {test}\nblab: {blab}".format(hits=get_hit_count(), test==get_hit_count2(), blab==get_hit_count2())
+    return page
 
 
 if __name__ == "__main__":
