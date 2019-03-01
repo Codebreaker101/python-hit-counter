@@ -21,7 +21,7 @@ def get_hit_count3():
 def hit():
     count = get_hit_count()
     #s = "This is an {example} with {vars}".format(vars="variables", example="example")
-    page = "hits: {hits}\ntest: {test}\nblab: {blab}".format(hits=get_hit_count(), test==get_hit_count2(), blab==get_hit_count2())
+    page = "hits: {hits}\ntest: {test}\nblab: {blab}".format(hits=get_hit_count(), test=get_hit_count2(), blab=get_hit_count2())
     return page
 
 
