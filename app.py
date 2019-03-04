@@ -4,7 +4,7 @@ from flask import Flask
 
 
 app = Flask(__name__)
-startup_nodes = [{"host": "redis-cluster.om-redis-cluster-test", "port": "6379"}]
+startup_nodes = [{"host": "redis-cluster", "port": "6379"}]
 cache = StrictRedisCluster(startup_nodes=startup_nodes, decode_responses=True)
 
 
