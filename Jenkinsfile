@@ -7,10 +7,11 @@ pipeline {
         sh '''mkdir -p ./artifacts
 
 touch ./artifacts/testFile01.log
+touch ./artifacts/testFile02.log
 
-ls -hal'''
+ls -hal
+ls -hal ./artifacts'''
         archiveArtifacts(artifacts: './artifacts', allowEmptyArchive: true, fingerprint: true, onlyIfSuccessful: true)
-        sh 'ls -hal'
       }
     }
     stage('Second step') {
