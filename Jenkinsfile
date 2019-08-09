@@ -14,6 +14,7 @@ ls -hal ./artifacts'''
       }
     }
     stage('Second step') {
+      agent any
       steps {
         sh 'ls -hal'
       }
