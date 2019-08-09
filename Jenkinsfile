@@ -1,8 +1,7 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Artifacts') {
-      agent any
       steps {
         sh '''mkdir -p ./artifacts
 
@@ -15,7 +14,6 @@ ls -hal ./artifacts'''
       }
     }
     stage('Second step') {
-      agent any
       steps {
         sh 'ls -hal'
       }
