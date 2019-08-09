@@ -7,11 +7,11 @@ pipeline {
 touch ./artifacts/testFile01.log
 
 ls -hal'''
-        archiveArtifacts(artifacts: './artifacts', allowEmptyArchive: true, fingerprint: true, onlyIfSuccessful: true)
+        archiveArtifacts(artifacts: 'artifacts', allowEmptyArchive: true, fingerprint: true, onlyIfSuccessful: true)
         sh 'ls -hal'
       }
     }
-    stage('') {
+    stage('Second step') {
       steps {
         sh 'ls -hal'
       }
