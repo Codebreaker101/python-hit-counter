@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Artifacts') {
       steps {
@@ -14,6 +14,7 @@ ls -hal ./artifacts'''
       }
     }
     stage('Second step') {
+      agent any
       steps {
         sh 'ls -hal'
       }
