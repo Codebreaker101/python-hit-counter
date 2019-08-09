@@ -11,7 +11,7 @@ touch ./artifacts/testFile02.log
 
 ls -hal
 ls -hal ./artifacts'''
-        archiveArtifacts(artifacts: './artifacts', allowEmptyArchive: true, fingerprint: true, onlyIfSuccessful: true)
+        archiveArtifacts(artifacts: 'artifacts', allowEmptyArchive: true, fingerprint: true, onlyIfSuccessful: true)
       }
     }
     stage('Second step') {
